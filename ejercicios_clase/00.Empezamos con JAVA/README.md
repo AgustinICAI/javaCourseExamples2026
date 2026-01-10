@@ -9,7 +9,6 @@
 - Aplicaciones escritorio (Java SE), aplicaciones web (Java EE) / servidor de aplicaciones (Java SE) / Microservicios (Springboot - Java SE), Movil (Android - Java SE)
 
 ## Comparación con otros lenguajes
-[TIOBE](https://www.tiobe.com/tiobe-index/)
 
 ## JVM
 - código java, bytecode y JVM
@@ -17,8 +16,8 @@
 ## Instalación en local del jdk e IDE
 Importancia del licenciamiento:  Software comercial - Trial, Software gratuito, software opensource
 
-Instalar Java SE - Oracle 23 (java y javac)
-[JAVA Oracle JDK 23](https://www.oracle.com/es/java/technologies/downloads/)
+Instalar Java SE - Oracle 25 (java y javac)
+[JAVA Oracle JDK 25](https://www.oracle.com/es/java/technologies/downloads/)
 
 Actualizar el PATH de tu máquina para incluir ./bin
 [Modificacion Path](https://www.java.com/en/download/help/path.xml)
