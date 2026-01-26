@@ -20,6 +20,13 @@ class Animal{
     hambre = 100; //Empieza con hambre al 100%
     listo = false;
   }
+    Animal(String _tipo){
+    tipo = _tipo;
+    x = Math.random()*1000;
+    y = Math.random()*1000; 
+    hambre = 100; //Empieza con hambre al 100%
+    listo = false;
+  }
 
   //MÉTODOS
   void setX(double _x){
