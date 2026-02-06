@@ -1,3 +1,6 @@
+import java.util.Calendar;
+import java.util.Date;
+
 abstract class Animal{
   //ATRIBUTOS
   double hambre; //0 lleno, 100 muy hambriento
@@ -15,6 +18,7 @@ abstract class Animal{
     this.hambre = 100; //Empieza con hambre al 100%
     this.listo = false;
     this.vivo = true;
+    inicioProduccion = Calendar.getInstance().getTimeInMillis();
   }
   Animal(){
     //REUTILIZACIÓN DE CONSTRUCTOR, PRINCIPIO DRY
@@ -88,12 +92,15 @@ abstract class Animal{
       //SI EL CONDICIONAL SOLO TIENE UNA LINEA, NO HACEN FALTA CORCHETES
       listo = true;
   }
-
-  String getInfo(){
-    return "x="+ x +", y="+ y;
+  @Override
+  public String toString() {
+    Date d = new Date(inicioProduccion);
+    return "hambre=" + hambre + ", inicioProduccion=" + d + ", listo=" + listo + ", x=" + x
+        + ", y=" + y + ", vivo=" + vivo + "]";
   }
   
-  public boolean isVivo() {
+
+  boolean isVivo() {
     return vivo;
   }
 

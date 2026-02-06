@@ -2,7 +2,7 @@ class App {
   public static void main(String argv[]){  
     Animal a1 = new Pollo();
 
-    Animal[] animales = new Animal[20];
+    Animal[] animales = new Animal[5];
     animales[0] = new Pollo();
     animales[1] = new Vaca(30,20);
     animales[2] = new Vison();
@@ -43,8 +43,8 @@ class App {
     }
     System.out.println("mostrando todo el array");
     for(Animal a : animales)
+        //System.out.println(a.toString());
         System.out.println(a);
-
 
 
 

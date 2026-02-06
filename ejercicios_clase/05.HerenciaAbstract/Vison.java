@@ -28,6 +28,9 @@ class Vison extends Animal{
       return null;
     }
   }
+  public String toString(){
+    return "TIPO VISON ->" + super.toString();
+  }
 
   
 

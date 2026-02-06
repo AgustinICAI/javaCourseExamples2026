@@ -21,8 +21,8 @@ class Vaca extends Animal{
     return new Producto("carne vacuno");
   }
 
-  String getInfo(){
-    return "TIPO VACA ->" + super.getInfo();
+  public String toString(){
+    return "TIPO VACA ->" + super.toString();
   }
 
   

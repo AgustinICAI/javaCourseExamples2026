@@ -16,7 +16,7 @@ class Pollo extends Animal {
     return new Producto("huevo");
   }
 
-  String getInfo(){
-    return "TIPO POLLO ->" + super.getInfo();
+  public String toString(){
+    return "TIPO POLLO ->" + super.toString();
   }
 }
