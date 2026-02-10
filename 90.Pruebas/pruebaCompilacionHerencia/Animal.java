@@ -1,32 +1,20 @@
-class Perro extends Animal {
+abstract class Animal {
+    private String nombre;
     
-    public Perro(String nombre) {
-        super() 
+    public Animal(String nombre) {
+        this.nombre = nombre;
     }
     
-    public void sonido() { 
-        System.out.println("El perro ladra")
-    }
+    abstract public void hacerSonido();
     
     public void moverse() {
-        super.moverse()
-        System.out.println("El perro corre")
+        System.out.println("El animal se está moviendo");
     }
 
-    public void mostrarNombre() {
-        return "El nombre del perro es: " + nombre;
+    public String getNombre(){
+      return nombre;
     }
-    
-
-
-
-public class Main {
-    public static void main(String[] args) {
-        Animal miPerro1 = new Animal("Bobby") 
-        
-        Perro miPerro2 = new Perro("Firulais") 
-        miPerro1.hacerSonido();
-        miPerro2.correr();
-
+    public void setNombre(String nombre){
+      this.nombre = nombre;
     }
 }
