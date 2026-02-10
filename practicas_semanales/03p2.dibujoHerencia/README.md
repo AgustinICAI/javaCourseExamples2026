@@ -17,7 +17,7 @@ Se investigará en la API del JDK la forma de pintar rectángulos y círculos co
 ![Salida de App01](output1.jpg)
 * AppDibujo02: Crear 10 cuadrados que se vayan pintando con un intervalo de 1 segundo desplazándose en forma diagonal (de arriba a la izquierda hacia abajo a la derecha).
 ![Salida de App02](output2.jpg)
-* AppDibujo03: Crear 4 triángulos equilateros (revisad un poco la trigonometría, podéis usar la clase Math). Estos triángulos pueden estar rellenos o no, así como su posición y lado también tendrá que ser aleatorios.
+* AppDibujo03: Con ayuda de alguna IA Generativa, crear 5 estrellas de 5 puntas (revisad un poco la trigonometría, podéis usar la clase Math). Estas estrellas pueden estar rellenos o no, así como su posición y lado también tendrá que ser aleatorios.
 
 
 
