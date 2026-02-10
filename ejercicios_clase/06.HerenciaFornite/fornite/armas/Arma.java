@@ -5,14 +5,18 @@ import fornite.Objeto;
 
 public abstract class Arma extends Objeto implements Atacable {
   
-  int nivel;
-  double alcance;
-  double precision;
-  int dano;
-  
+  private double alcance;
+  private double precision;
+  private int dano;
 
   public Arma(double alcance, double precision, int dano) {
-    nivel = 1;
+    //nivel = 1;
+    //OPCION 1: POCO LIMPIA
+    //super.setNivel(1);
+    //OPCION 2: MAS LIMPIA
+    //super(1);
+    //OPCION 3, DEFINO EL NIVEL EN EL CONSTRUCTOR PADRE
+    super();
     this.alcance = alcance;
     this.precision = precision;
     this.dano = dano;
@@ -21,6 +25,6 @@ public abstract class Arma extends Objeto implements Atacable {
 
   public int atacar(int distancia){
     //FUERZO LA CONVERSION A ENTERO DESDE DOUBLE
-    return (int) (nivel*alcance*precision*dano / distancia);
+    return (int) (getNivel()*alcance*precision*dano / distancia);
   }
 }
