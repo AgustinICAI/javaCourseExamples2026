@@ -1,3 +1,10 @@
+/*
+COMPILAR CON LIBRERIAS EN LINUX: javac JCalculadora.java -cp .:exp4j-0.4.8.jar
+COMPILAR CON LIBRERIAS EN WINDOWS: javac JCalculadora.java -cp .;exp4j-0.4.8.jar
+EJECUTAR CON LIBRERIAS EN LINUX: java -cp .:exp4j-0.4.8.jar JCalculadora
+EJECUTAR CON LIBRERIAS EN WINDOWS: java -cp .;exp4j-0.4.8.jar JCalculadora
+*/
+
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -64,7 +71,7 @@ public class JCalculadora extends JFrame implements ActionListener{
       txtCalculo.setText(txtCalculo.getText()+hmBtns.get(e.getSource()));
       return;
     }
-    /*
+    
     String expr = txtCalculo.getText()
         .replace("X", "*")
         .replace("x", "*")
@@ -73,7 +80,6 @@ public class JCalculadora extends JFrame implements ActionListener{
     Expression expression = new ExpressionBuilder(expr).build();
     double result = expression.evaluate();
     txtCalculo.setText(String.valueOf(result));
-    */
+    
   }
-
 }
