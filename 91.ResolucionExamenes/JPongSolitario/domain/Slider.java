@@ -1,10 +1,13 @@
+package domain;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import ui.GamePanel;
 import util.PropertiesLoader;
 
 public class Slider extends Sprite {
@@ -19,6 +22,7 @@ public class Slider extends Sprite {
     this.vy = 0;
     this.width = Integer.parseInt(propertiesPantalla.get("WIDTH"));
     this.height = Integer.parseInt(propertiesPantalla.get("HEIGHT"));
+    this.dv = Integer.parseInt(propertiesPantalla.get("INCREMENTO_VELOCIDAD"));
   }
 
   public int getWidth() {
@@ -30,12 +34,12 @@ public class Slider extends Sprite {
   }
 
   @Override
-  void paint(Graphics g) {
+  public void paint(Graphics g) {
     g.setColor(Color.RED);
     g.fillRect(x, y, width, height);
   }
 
-  void mover(HashSet<Integer> teclasPulsadas) {
+  public void mover(HashSet<Integer> teclasPulsadas) {
     HashMap<String, String> propertiesPantalla = PropertiesLoader.loadProperties("properties.txt", "Pantalla");
     int tamPX = Integer.parseInt(propertiesPantalla.get("WIDTH"));
     
@@ -45,14 +49,24 @@ public class Slider extends Sprite {
       x += vx/GamePanel.FPS;
     if(x<0)
       x = 0;
-    else if (x>tamPX)
-      x = tamPX;
+    else if (x>tamPX-width)
+      x = tamPX-width;
   }
 
   @Override
   public String toString() {
     return "Slider [x=" + x + ", y=" + y + ", vx=" + vx + ", vy=" + vy + ", width=" + width + ", height=" + height
         + "]";
+  }
+
+  @Override
+  public Rectangle getShape() {
+    return new Rectangle(x,y, width, height);
+  }
+
+  public void incrementaVelocidad() {
+
+
   }
 
   

@@ -37,6 +37,7 @@ public class PropertiesLoader {
             }
         } catch (IOException e) {
             System.err.println("Error al leer el archivo de propiedades: " + e.getMessage());
+            e.printStackTrace();
         }
 
         return properties;
