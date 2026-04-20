@@ -11,10 +11,10 @@ El alumno tendrá que desarrollar una aplicación Swing que gestione un tipo cua
 
 Un fichero ZIP que contenga:
 - Proyecto.pdf: Un PDF de una página con los pantallazos más representativos de vuestra aplicación.
-- Sources.zip: Un ZIP con los .JAVA (en la estructura de paquetes que se tenga).
-- Bin.zip: Un JAR del fichero de ejecución del proyecto con los ficheros y directorios complementarios necesarios. Vuestro profesor usará estar carpeta para corregir la práctica, descomprimiendola, y luego lanzando el comando java -jar xxx.jar. 
-- Javadoc.zip: Un ZIP con la documentación de JAVADOC. Documentar 10 elementos (clase, atributos o métodos). (NO NECESARIA)
+- src.zip: Un ZIP con los .JAVA (en la estructura de paquetes que se tenga).
+- bin.zip: contendrá un JAR del fichero de ejecución del proyecto (con su MANIFEST.mf) con los ficheros y directorios complementarios necesarios (recomendable seguir la estructura con una carpeta de resources). Vuestro profesor usará estar carpeta para corregir la práctica, descomprimiendola, y luego lanzando el comando java -jar xxx.jar. 
 - README.txt: Un fichero de texto llamado README.txt con los usuarios, contraseñas o palabras clave a utilizar en el programa. 
+- Javadoc.zip: Un ZIP con la documentación de JAVADOC. Documentar 10 elementos (clase, atributos o métodos). (NO NECESARIA)
 
 Gracias!
 
