@@ -13,12 +13,13 @@ import java.util.stream.Collectors;
 
 
 public class Juego {
-        //**BLOQUE DE CÓDIGO A IMPLEMENTAR POR EL ALUMNO**//
+  //**BLOQUE DE CÓDIGO A IMPLEMENTAR POR EL ALUMNO**//
   ArrayList<Casilla> casillas;
   int[][] combinaciones;
+  private JVentana ventana;
 
   public Juego(JVentana ventana){
-    
+    this.ventana = ventana;
     try {
       combinaciones = IOFichero.leerCombinaciones("./resources/WinningCombination.txt");
     } catch (IOException e) {
@@ -31,7 +32,7 @@ public class Juego {
         casillas.add(new Casilla(new Rectangle(j*Casilla.ANCHO+Tablero.INICIO_CUADRICULA_X,
                                                i*Casilla.ANCHO+Tablero.INICIO_CUADRICULA_Y,
                                                Casilla.ANCHO,Casilla.ANCHO)));
-
+                                               
   }
 
   public ArrayList<Casilla> getCasillas() {
@@ -53,23 +54,35 @@ public class Juego {
     
   }
 
+  int[] combinacionGanadora = null;
+
+  public int[] getCombinacionGanadora() {
+    return combinacionGanadora;
+  }
+
   public String getGanador() {
-    int[] combinacionGanadora = null;
+    combinacionGanadora = null;
     for(int combinacion = 0; combinacion < combinaciones.length; combinacion ++){
       boolean ganador = true;
-      for(int i = 0; i < combinaciones[i].length; i ++){
-        Letra letra = casillas.get(i).getLetra();
-        if(letra==null || (letra instanceof LetraO && turnoX) || (letra instanceof LetraX && !turnoX) )
+      for(int i = 0; i < combinaciones[combinacion].length; i ++){
+        int indice = combinaciones[combinacion][i];
+        Letra letra = casillas.get(indice).getLetra();
+        if(letra==null || (letra instanceof LetraO && !turnoX) || (letra instanceof LetraX && turnoX) )
           ganador = false;
       }
-      if(ganador)
+      if(ganador){
         combinacionGanadora = combinaciones[combinacion];
+        ventana.arrancarAnimacion(combinacionGanadora);
+      }
     }
     if(combinacionGanadora != null)
-      return "Ganador " + (turnoX?"X":"O");
+      return "Ganador " + (turnoX?"O":"X");
     else return null;
   }
-  
 
-
+  public void reset() {
+    casillas.forEach(c -> {c.resetLetra();});
+    turnoX = true;
+    combinacionGanadora = null;
+  }
 }
