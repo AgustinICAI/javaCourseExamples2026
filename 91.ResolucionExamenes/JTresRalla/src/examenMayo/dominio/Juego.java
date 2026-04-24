@@ -11,7 +11,9 @@ import java.util.Collection;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-
+/**
+ * Clase que representa el juego en sí. Se encarga de gestionar las casillas, las combinaciones ganadoras, el turno de los jugadores y de detectar el ganador. También se encarga de resetear el juego cuando se inicia una nueva partida.
+ */
 public class Juego {
   //**BLOQUE DE CÓDIGO A IMPLEMENTAR POR EL ALUMNO**//
   ArrayList<Casilla> casillas;

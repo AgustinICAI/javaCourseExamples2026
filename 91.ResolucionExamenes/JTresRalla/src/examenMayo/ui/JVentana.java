@@ -6,7 +6,9 @@ import java.awt.*;
 
 import examenMayo.dominio.Casilla;
 import examenMayo.dominio.Juego;
-
+/**
+ * Clase que representa la ventana principal del juego. Se encarga de crear el tablero y de gestionar la animación de parpadeo de las casillas ganadoras cuando se detecta un ganador. También gestiona el inicio de una nueva partida cuando se hace clic en la ventana después de que se haya detectado un ganador.
+ */
 public class JVentana extends JFrame {
   private Juego juego;
   private Tablero tablero;

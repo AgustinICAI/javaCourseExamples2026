@@ -11,7 +11,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
-
+/**
+ * Clase que representa el tablero del juego. Se encarga de dibujar el fondo, las casillas y de gestionar los eventos de ratón para detectar las pulsaciones en las casillas. También gestiona el inicio de una nueva partida y la animación de parpadeo de las casillas ganadoras.
+ */
 public class Tablero extends JPanel {
   final static int ANCHO = 300;
   final static int ALTO = 200;
@@ -69,7 +71,9 @@ public class Tablero extends JPanel {
         c.getLetra().pintar(g);
     });
   }
-
+  /**
+   * Indica si se ha iniciado una nueva partida. Si es así, resetea el juego y devuelve true. En caso contrario, devuelve false.
+   */
   public boolean isNuevaPartida() {
     if(nuevaPartida){
       nuevaPartida = false;
