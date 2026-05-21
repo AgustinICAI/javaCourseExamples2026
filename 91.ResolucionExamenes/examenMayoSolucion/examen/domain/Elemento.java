@@ -1,0 +1,55 @@
+package examen.domain;
+
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
+public abstract class Elemento {
+  protected double x, y;
+  protected int width, height;
+
+  public Elemento(double x, double y, int width, int height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+  }
+
+  public abstract void pintar(Graphics g);
+
+  public Rectangle getArea() {
+    return new Rectangle((int) x, (int) y, width, height);
+  }
+
+  public double getX() {
+    return x;
+  }
+
+  public void setX(double x) {
+    this.x = x;
+  }
+
+  public double getY() {
+    return y;
+  }
+
+  public void setY(double y) {
+    this.y = y;
+  }
+
+  public int getWidth() {
+    return width;
+  }
+
+  public void setWidth(int width) {
+    this.width = width;
+  }
+
+  public int getHeight() {
+    return height;
+  }
+
+  public void setHeight(int height) {
+    this.height = height;
+  }
+
+}
